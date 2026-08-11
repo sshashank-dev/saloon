@@ -5,7 +5,7 @@ const OnlineCounter = () => {
     const [onlineUsers, setOnlineUsers] = useState(0);
 
     useEffect(() => {
-        const socket = io("http://localhost:5000");
+        const socket = io("https://saloon-lyuh.onrender.com");
 
         socket.on("onlineUsers", (count) => {
             setOnlineUsers(count);
