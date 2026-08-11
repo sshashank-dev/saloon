@@ -134,3 +134,120 @@
 .music-playlist-scroll::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.55);
 }
+
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   Desktop design remains unchanged
+========================================= */
+
+@media (max-width: 600px) {
+
+  .app {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Online counter */
+  .online-counter {
+    top: 22px;
+    left: 16px;
+  }
+
+  /* Clock */
+  .clock {
+    top: 24px;
+    right: 20px;
+  }
+
+  /* Music player */
+  .music-player {
+    width: calc(100vw - 30px) !important;
+    max-width: 470px;
+    bottom: 35px !important;
+  }
+
+  /* Playlist */
+  .music-playlist-panel {
+    width: calc(100vw - 30px) !important;
+    max-width: 470px;
+    height: 320px !important;
+    bottom: 145px !important;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .music-player {
+    padding: 5px 7px !important;
+    gap: 6px !important;
+  }
+
+  .music-player>div:first-child {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .music-player button {
+    flex-shrink: 0;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .contact-link {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    margin-top: 0 !important;
+    z-index: 20;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE SONG LIST
+   Desktop remains unchanged
+========================================= */
+
+@media (max-width: 600px) {
+
+  .music-playlist-panel {
+    width: calc(100vw - 30px) !important;
+    height: 320px !important;
+    bottom: 145px !important;
+    border-radius: 16px !important;
+  }
+
+  .music-playlist-panel .music-playlist-scroll {
+    padding: 6px !important;
+  }
+
+  .music-playlist-panel button {
+    grid-template-columns: 28px minmax(0, 1fr) 90px !important;
+    column-gap: 8px !important;
+    height: 42px !important;
+    padding: 0 8px !important;
+  }
+
+  .music-playlist-panel button>div:nth-child(2) {
+    font-size: 12px !important;
+  }
+
+  .music-playlist-panel button>div:nth-child(3) {
+    font-size: 10px !important;
+  }
+}
