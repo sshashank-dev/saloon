@@ -9,8 +9,8 @@ ICONS
 
 const ShuffleIcon = () => (<svg
     viewBox="0 0 24 24"
-    width="14"
-    height="14"
+    width="18"
+    height="18"
     fill="none"
     stroke="currentColor"
     strokeWidth="1.8"
@@ -21,24 +21,24 @@ const ShuffleIcon = () => (<svg
 
 const PreviousIcon = () => (<svg
     viewBox="0 0 24 24"
-    width="14"
-    height="14"
+    width="18"
+    height="18"
     fill="currentColor"
 > <path d="M6 5h2v14H6z" /> <path d="M18 6.5L10 12l8 5.5z" /> </svg>
 );
 
 const NextIcon = () => (<svg
     viewBox="0 0 24 24"
-    width="14"
-    height="14"
+    width="18"
+    height="18"
     fill="currentColor"
 > <path d="M16 5h2v14h-2z" /> <path d="M6 6.5L14 12l-8 5.5z" /> </svg>
 );
 
 const QueueIcon = () => (<svg
     viewBox="0 0 24 24"
-    width="14"
-    height="14"
+    width="18"
+    height="18"
     fill="none"
     stroke="currentColor"
     strokeWidth="1.8"
@@ -611,17 +611,17 @@ const MusicPlayer = () => {
                 style={{
                     position: "fixed",
                     left: "50%",
-                    bottom: "135px",
+                    bottom: "190px",
                     transform: `translateX(-50%) translateY(${showPlaylist ? "0px" : "15px"})`,
-                    width: "320px",
-                    height: "230px",
-                    maxWidth: "calc(100vw - 30px)",
-                    background: "rgba(0,0,0,0.08)",
-                    backdropFilter: "blur(5px)",
-                    WebkitBackdropFilter: "blur(5px)",
-                    border: "1px solid rgba(255, 253, 253, 0.12)",
-                    borderRadius: "16px",
-                    boxShadow: "0 8px 35px rgba(0,0,0,0.18)",
+                    width: "470px",
+                    height: "380px",
+                    maxWidth: "calc(100vw - 40px)",
+                    background: "rgba(0,0,0,0.12)",
+                    backdropFilter: "blur(8px)",
+                    WebkitBackdropFilter: "blur(8px)",
+                    border: "1px solid rgba(255, 253, 253, 0.15)",
+                    borderRadius: "20px",
+                    boxShadow: "0 12px 45px rgba(0,0,0,0.25)",
                     overflow: "hidden",
                     zIndex: 1000,
                     color: "white",
@@ -637,7 +637,7 @@ const MusicPlayer = () => {
                         width: "100%",
                         height: "100%",
                         overflowY: "auto",
-                        padding: "0px 0px",
+                        padding: "8px",
                         boxSizing: "border-box",
                         scrollbarWidth: "thin",
                         scrollbarColor: "rgba(255,255,255,0.2) transparent",
@@ -652,17 +652,17 @@ const MusicPlayer = () => {
                                 onClick={() => selectSong(index)}
                                 style={{
                                     width: "100%",
-                                    height: "25px",
+                                    height: "40px",
                                     display: "grid",
-                                    gridTemplateColumns: "24px minmax(0, 1fr) 140px",
+                                    gridTemplateColumns: "36px minmax(0, 1fr) 200px",
                                     alignItems: "center",
-                                    columnGap: "10px",
-                                    padding: "0 8px",
-                                    margin: "0 0 1px 0",
+                                    columnGap: "14px",
+                                    padding: "0 12px",
+                                    margin: "0 0 2px 0",
                                     border: "none",
-                                    borderRadius: "6px",
+                                    borderRadius: "10px",
                                     background: active
-                                        ? "rgba(248, 243, 243, 0.15)"
+                                        ? "rgba(248, 243, 243, 0.2)"
                                         : "transparent",
                                     color: "white",
                                     cursor: "pointer",
@@ -673,7 +673,7 @@ const MusicPlayer = () => {
                                 onMouseEnter={(e) => {
                                     if (!active) {
                                         e.currentTarget.style.background =
-                                            "rgba(255,255,255,0.05)";
+                                            "rgba(255,255,255,0.06)";
                                     }
                                 }}
                                 onMouseLeave={(e) => {
@@ -685,8 +685,8 @@ const MusicPlayer = () => {
                             >
                                 <div
                                     style={{
-                                        fontSize: "7px",
-                                        fontWeight: active ? 600 : 600,
+                                        fontSize: "11px",
+                                        fontWeight: 600,
                                         fontFamily: "'Poppins', sans-serif",
                                         color: active ? "white" : "rgba(255,255,255,0.5)",
                                         textAlign: "left",
@@ -699,8 +699,8 @@ const MusicPlayer = () => {
                                 <div
                                     style={{
                                         minWidth: 0,
-                                        fontSize: "9px",
-                                        fontWeight: active ? 600 : 600,
+                                        fontSize: "13px",
+                                        fontWeight: active ? 600 : 500,
                                         fontFamily: "'Poppins', sans-serif",
                                         color: active
                                             ? "rgba(255,255,255,1)"
@@ -718,11 +718,11 @@ const MusicPlayer = () => {
                                 <div
                                     style={{
                                         minWidth: 0,
-                                        fontSize: "9px",
-                                        fontWeight: active ? 600 : 600,
+                                        fontSize: "12px",
+                                        fontWeight: active ? 600 : 500,
                                         fontFamily: "'Poppins', sans-serif",
                                         color: active
-                                            ? "rgba(255,255,255,0.8)"
+                                            ? "rgba(255,255,255,0.85)"
                                             : "rgba(255,255,255,0.5)",
                                         whiteSpace: "nowrap",
                                         overflow: "hidden",
@@ -743,25 +743,25 @@ const MusicPlayer = () => {
             <div
                 className="music-player"
                 style={{
-                    width: "320px",
-                    borderRadius: "50px",
-                    padding: "8px 12px",
-                    gap: "10px",
+                    width: "470px",
+                    borderRadius: "60px",
+                    padding: "6px 8px",
+                    gap: "12px",
                     display: "flex",
                     alignItems: "center",
-                    background: "rgba(255, 255, 255, 0.13)",
-                    backdropFilter: "blur(1px)",
+                    background: "rgba(254, 254, 254, 0.13)",
+                    backdropFilter: "blur(5px)",
                     WebkitBackdropFilter: "blur(20px)",
-                    border: "1px solid rgba(255, 255, 255, 0.15)",
-                    boxShadow: "0 8px 35px rgba(0,0,0,0.18)",
+                    border: "1px solid rgba(15, 14, 14, 0.44)",
+                    boxShadow: "0 12px 45px rgba(0,0,0,0.25)",
                 }}
             >
                 {/* ALBUM ART */}
                 <div
                     className={playing ? "rotating-album" : ""}
                     style={{
-                        width: "34px",
-                        height: "34px",
+                        width: "50px",
+                        height: "50px",
                         borderRadius: "50%",
                         overflow: "hidden",
                         flexShrink: 0,
@@ -801,13 +801,13 @@ const MusicPlayer = () => {
                     <div
                         style={{
                             fontWeight: "bold",
-                            fontSize: "8px",
+                            fontSize: "13px",
                             fontFamily: "'Poppins', sans-serif",
                             color: "white",
                             whiteSpace: "nowrap",
                             overflow: "hidden",
                             textOverflow: "ellipsis",
-                            lineHeight: "1.2",
+                            lineHeight: "1.3",
                         }}
                     >
                         {songTitle}
@@ -815,14 +815,14 @@ const MusicPlayer = () => {
 
                     <div
                         style={{
-                            fontSize: "7px",
-                            fontWeight: "bold",
+                            fontSize: "11px",
+                            fontWeight: "500",
                             fontFamily: "'Poppins', sans-serif",
                             color: "rgba(255,255,255,0.7)",
                             whiteSpace: "nowrap",
                             overflow: "hidden",
                             textOverflow: "ellipsis",
-                            marginBottom: "3px",
+                            marginBottom: "6px",
                             lineHeight: "1.2",
                         }}
                     >
@@ -834,7 +834,7 @@ const MusicPlayer = () => {
                         onClick={handleSeek}
                         style={{
                             width: "100%",
-                            height: "2.5px",
+                            height: "4px",
                             background: "rgba(255,255,255,0.25)",
                             borderRadius: "2px",
                             cursor: "pointer",
@@ -854,10 +854,10 @@ const MusicPlayer = () => {
                     {/* TIME */}
                     <div
                         style={{
-                            fontSize: "6px",
+                            fontSize: "10px",
                             fontFamily: "'Poppins', sans-serif",
                             color: "rgba(255,255,255,0.65)",
-                            marginTop: "2px",
+                            marginTop: "4px",
                         }}
                     >
                         {formatTime(currentTime)}
@@ -871,15 +871,15 @@ const MusicPlayer = () => {
                     style={{
                         display: "flex",
                         alignItems: "center",
-                        gap: "6px",
+                        gap: "10px",
                     }}
                 >
                     {/* SHUFFLE */}
                     <button
                         onClick={toggleShuffle}
                         style={{
-                            width: "24px",
-                            height: "24px",
+                            width: "36px",
+                            height: "36px",
                             borderRadius: "50%",
                             background: shuffle
                                 ? "rgba(255,255,255,0.28)"
@@ -911,8 +911,8 @@ const MusicPlayer = () => {
                     <button
                         onClick={previousSong}
                         style={{
-                            width: "24px",
-                            height: "24px",
+                            width: "36px",
+                            height: "36px",
                             borderRadius: "50%",
                             background: "transparent",
                             border: "none",
@@ -938,8 +938,8 @@ const MusicPlayer = () => {
                     <button
                         onClick={togglePlay}
                         style={{
-                            width: "30px",
-                            height: "30px",
+                            width: "44px",
+                            height: "44px",
                             borderRadius: "50%",
                             background: "white",
                             color: "black",
@@ -948,7 +948,7 @@ const MusicPlayer = () => {
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            fontSize: "10px",
+                            fontSize: "14px",
                             fontWeight: "bold",
                             transition: "transform 0.15s ease, opacity 0.15s ease",
                         }}
@@ -966,8 +966,8 @@ const MusicPlayer = () => {
                     <button
                         onClick={nextSong}
                         style={{
-                            width: "24px",
-                            height: "24px",
+                            width: "36px",
+                            height: "36px",
                             borderRadius: "50%",
                             background: "transparent",
                             border: "none",
@@ -993,8 +993,8 @@ const MusicPlayer = () => {
                     <button
                         onClick={() => setShowPlaylist(!showPlaylist)}
                         style={{
-                            width: "24px",
-                            height: "24px",
+                            width: "36px",
+                            height: "36px",
                             borderRadius: "50%",
                             background: showPlaylist
                                 ? "rgba(255,255,255,0.28)"

@@ -49,8 +49,8 @@ const OnlineCounter = () => {
             <span
                 className="online-dot"
                 style={{
-                    width: "7px",
-                    height: "7px",
+                    width: "10px",
+                    height: "10px",
                     borderRadius: "50%",
                     background: "#5cff75",
                     boxShadow: "0 0 10px #5cff75, 0 0 20px rgba(92, 255, 117, 0.5)",
@@ -60,7 +60,7 @@ const OnlineCounter = () => {
             ></span>
             <span
                 style={{
-                    fontSize: "8.5px",
+                    fontSize: "12px",
                     fontWeight: "bold",
                     fontFamily: "'Poppins', sans-serif",
                     opacity: 0.85,

@@ -15,7 +15,7 @@ const Clock = () => {
         <div
             className="clock"
             style={{
-                fontSize: "9px",
+                fontSize: "15px",
                 fontWeight: "bold",
                 fontFamily: "'Poppins', sans-serif",
                 textTransform: "lowercase",
