@@ -5,7 +5,7 @@ const OnlineCounter = () => {
     const [onlineUsers, setOnlineUsers] = useState(0);
 
     useEffect(() => {
-        const socket = io("https://superdeluxe-saloon.vercel.app/");
+        const socket = io("https://saloon-lyuh.onrender.com");
 
         socket.on("onlineUsers", (count) => {
             setOnlineUsers(count);
