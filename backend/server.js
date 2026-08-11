@@ -7,7 +7,8 @@ const app = express();
 
 const allowedOrigins = [
     "http://localhost:5173",
-    // Add your Vercel URL here after deploying the frontend
+    "https://saloon-umber-theta.vercel.app",
+
 ];
 
 app.use(
